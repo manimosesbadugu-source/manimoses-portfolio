@@ -23,7 +23,7 @@ const AboutMe = () => {
             className="glass-card about-card"
           >
             <p className="about-text">
-              “I am an experienced professional with a background in quality analysis, loan processing, and warehouse management. I have worked in fast-paced environments handling operations, payroll, and customer relationships. I focus on improving workflows, maintaining quality standards, and delivering efficient results.”
+              “I am an experienced professional with a background in quality analysis, loan processing, and warehouse management. I thrive in fast-paced environments where I can manage operations, improve workflows, and maintain strong customer relationships. I continuously focus on efficiency, quality, and delivering impactful results.”
             </p>
             <div className="about-stats">
               <div className="stat-item">
@@ -51,6 +51,7 @@ const AboutMe = () => {
           font-size: 3rem;
           margin-bottom: 3rem;
           text-align: left;
+          font-weight: 800;
         }
         .about-grid {
           display: grid;
@@ -62,7 +63,7 @@ const AboutMe = () => {
           overflow: hidden;
         }
         .about-text {
-          font-size: 1.2rem;
+          font-size: 1.25rem;
           line-height: 1.8;
           color: var(--text-secondary);
           margin-bottom: 2rem;
@@ -74,9 +75,10 @@ const AboutMe = () => {
           padding-top: 2rem;
         }
         .stat-item h3 {
-          font-size: 2rem;
+          font-size: 2.5rem;
           color: var(--accent-cyan);
           margin-bottom: 0.2rem;
+          font-family: var(--font-outfit);
         }
         .stat-item p {
           color: var(--text-secondary);
