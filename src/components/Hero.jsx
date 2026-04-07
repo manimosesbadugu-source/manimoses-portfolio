@@ -8,22 +8,6 @@ const Hero = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   const name = "Mani Moses Badugu";
-  
-  const firstName = "Mani Moses";
-  const lastName = "Badugu";
-
-  const letterVariants = {
-    initial: { opacity: 0, y: 10, filter: "blur(5px)" },
-    animate: { opacity: 1, y: 0, filter: "blur(0px)" },
-  };
-
-  const containerVariants = {
-    animate: {
-      transition: {
-        staggerChildren: 0.05,
-      },
-    },
-  };
 
   return (
     <section id="home" className="hero-section">
@@ -40,34 +24,34 @@ const Hero = () => {
         </motion.div>
         
         <motion.h1
-          className="hero-title"
-          variants={containerVariants}
-          initial="initial"
-          animate="animate"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          style={{
+            fontSize: "clamp(3rem, 10vw, 5.5rem)",
+            fontWeight: "bold",
+            background: "linear-gradient(90deg, #00DBDE, #FC00FF)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            zIndex: 10,
+            position: "relative",
+            marginBottom: "1rem"
+          }}
+          className="text-glow"
         >
-          I'm 
-          <span className="gradient-text" style={{ marginLeft: '1.2rem', display: 'inline-flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {name.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                variants={letterVariants}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                style={{ display: 'inline-block', whiteSpace: char === " " ? "pre" : "normal" }}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </span>
+          Mani Moses Badugu
         </motion.h1>
+
         
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.6, delay: 1 }}
           className="hero-subtitle"
         >
           Operations & Quality Analyst Professional
         </motion.h2>
+
         
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -106,6 +90,9 @@ const Hero = () => {
           text-align: center;
           position: relative;
           padding-top: 80px;
+        }
+        .text-glow {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
         }
         .hero-content {
           max-width: 1000px;
